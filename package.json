@@ -14,6 +14,5 @@
 		"start-web": "webpack serve --open",
 		"watch-web": "webpack --watch",
 		"build-web": "webpack"
-	},
-	"dependencies": { }
+	}
 }
