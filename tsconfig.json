@@ -2,14 +2,17 @@
     "compilerOptions": {
         "forceConsistentCasingInFileNames": true,
         "strict": true,
-        "outDir": "./dist/",
+        "outDir": "./dist/server",
         "noImplicitAny": true,
-        "module": "ESNext",
         "target": "ESNext",
         "lib": ["ESNext", "DOM", "ESNext.Promise"],
         "jsx": "react",
         "allowJs": true,
         "moduleResolution": "node",
         "sourceMap": true,
-    }
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "module": "CommonJS"
+    },
+    "include": [ "./src/server" ]
 }
