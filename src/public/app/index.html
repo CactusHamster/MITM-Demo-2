@@ -9,8 +9,39 @@
 </head>
 <body>
     <div class="top">
-        <img src="/img/logo.png"></img>
-        <p>aaa</p>
+        <img src="./logo.png" style="height: 30px;">
+        <label>
+            <input type="text" placeholder="Search" id="searchbox">
+        </label>
     </div>
+    <style>
+        .grid-container {
+          display: grid;
+          grid-template-columns: auto auto auto;
+          background-color: #000000;
+          padding: 10px;
+          margin: 10px;
+        }
+        .grid-item {
+          background-color: rgb(222, 236, 255);
+          border: 1px solid rgba(0, 0, 0, 0.8);
+          padding: 20px;
+          font-size: 30px;
+          text-align: center;
+        }
+        </style>
+        <br>
+        <div class="grid-container">
+            <div class="grid-item">store item</div>
+            <div class="grid-item">book</div>
+            <div class="grid-item">computer</div>  
+            <div class="grid-item">facebook</div>
+            <div class="grid-item">github</div>
+            <div class="grid-item">google</div>  
+            <div class="grid-item">email</div>
+            <div class="grid-item">photos</div>
+            <div class="grid-item">amazon</div>  
+          </div>
+          
 </body>
 </html>

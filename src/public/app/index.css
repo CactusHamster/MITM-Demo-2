@@ -11,8 +11,22 @@ body {
     background-image: linear-gradient(90deg, rgb(76, 76, 250), lightblue);
     color: rgb(255, 255, 255);
     padding: 20px;
-    text-align: center;
+    text-align: left;
+    position: relative;
 }
 .top > h1 {
     margin: 0px;
 }
+#searchbox {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translate(-10%, -50%);
+}
+.square {
+    height: 250px;
+    width: 250px;
+    background-color: white;
+    border: black 3px solid;
+    margin: 15px;
+  }
