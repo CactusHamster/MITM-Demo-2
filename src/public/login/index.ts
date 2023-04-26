@@ -47,8 +47,9 @@ let onEnter = (elem: HTMLElement, action: Function) => {
             let res: Response;
             let data: any;
             try {
-                res = await fetch("/api/login", {
+                res = await fetch("/api/auth", {
                     method: "POST",
+                    headers: { "content-type": "application/json" },
                     body: JSON.stringify({
                         user: email,
                         password: password
@@ -58,9 +59,9 @@ let onEnter = (elem: HTMLElement, action: Function) => {
             } catch (e) { throw new Error("Failed to contact server."); }
             reset()
             if (!res.ok) throw new Error(`[${res.status}]: ${data.message ?? "<no response>"}`);
-            if (!data.token) throw new Error("Failed to understand remote server.");
+            if (!data.token) throw new Error(data.message ?? "invalid request");
             localStorage.setItem("token", data.token)
-            document.location = "/app"
+            document.location = "/app.html"
         } catch (e) {
             reset();
             if (!(e instanceof Error) && typeof e !== "string") return console.error(e);
